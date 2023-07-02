@@ -153,6 +153,13 @@
 			</div>	
 		</div>
 	</div>
+
+
+
+	<div class="flex max-lg:flex-col max-lg:items-center max-lg:text-center gap-8 md:gap-10 lg:gap-14">
+		<p class="text-[#F3C354] font-medium text-4xl md:text-5xl lg:text-[59px] w-full lg:w-1/2">Diploma of professional retraining</p>
+		<img src="/images/qualification/main.png" alt="" class="w-full lg:w-1/2">
+	</div>
 </template>
 
 <script setup>
