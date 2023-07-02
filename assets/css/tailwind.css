@@ -34,3 +34,8 @@
         @apply max-w-[var(--widthContent)]
     }    
 }
+
+
+.bg-learn {
+    background: linear-gradient(180deg, #202246 -53.38%, rgba(40, 43, 87, 0.2) 100%)
+}

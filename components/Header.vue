@@ -12,8 +12,8 @@
                 <NuxtLink to="/">Price</NuxtLink>
                 <button class="border border-[#EAEAEA66] py-4 px-7 text-white rounded-2xl text-lg font-medium lg:hidden">Start Learning</button>
             </nav>
-            <button class="border border-[#EAEAEA66] py-4 px-7 text-white rounded-2xl text-lg font-medium max-lg:hidden">Start Learning</button>
-            <button class="flex flex-col justify-between w-[26px] transition-[height] ease-linear duration-100" :class="isMenuShow ? 'h-5' : 'h-3.5'" @click="isMenuShow = !isMenuShow">
+            <button class="border border-[#EAEAEA66] py-4 px-7 text-white rounded-2xl text-lg font-medium max-lg:hidden transition-colors duration-500 hover:bg-[#EAEAEA] hover:text-[#1B275A]">Start Learning</button>
+            <button class="flex flex-col justify-between w-[26px] transition-[height] ease-linear duration-100 lg:hidden" :class="isMenuShow ? 'h-5' : 'h-3.5'" @click="isMenuShow = !isMenuShow">
                 <span :class="{'rotate-45' : isMenuShow}" class="w-full h-0.5 bg-white rounded-[1px] origin-[0] transition-transform ease-linear duration-500"></span>
                 <span :class="{'opacity-0' : isMenuShow}" class="w-full h-0.5 bg-white rounded-[1px] transition-opacity ease-linear duration-500"></span>
                 <span :class="{'-rotate-45' : isMenuShow}" class="w-full h-0.5 bg-white rounded-[1px] origin-[0] transition-transform ease-linear duration-500"></span>
