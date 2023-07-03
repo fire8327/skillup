@@ -207,7 +207,7 @@
 		lang: 'ru'
 	})
 
-	let message = ref(null)
+	let message = ref(false)
 
 	const feedback = async(forms) =>{
 		emailjs.send("service_unxcext","template_78eh80p",{
@@ -215,8 +215,7 @@
 		email: forms.email,
 		to_email: "fire83274@gmail.com",
 		}, "VXEtnBV5F6vEGQ15C")
-
-		message.value = 'Успешная отправка!'
+		message = ref(true)
 		reset('feedback')
 	}
 </script>
