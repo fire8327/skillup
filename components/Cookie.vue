@@ -10,6 +10,4 @@
 
 <script setup>
     const cookieShow = ref(true)
-
-
 </script>

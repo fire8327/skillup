@@ -173,7 +173,7 @@
 					</div>
 				</div>
 			</div>
-			<FormKit id="feedback" @submit="feedback" type="form" form-class="flex flex-col gap-5 w-full min-[425px]:w-[300px] items-center text-[#EFEFEF]" :actions="false">
+			<!-- <FormKit id="feedback" @submit="feedback" type="form" form-class="flex flex-col gap-5 w-full min-[425px]:w-[300px] items-center text-[#EFEFEF]" :actions="false">
                 <p class="text-2xl font-medium">Make an appointment or get a consultation</p>
 				<FormKit name="name" message-class="text-red-500" validation="required" label="Your name" type="text" outer-class="w-full" wrapper-class="w-full" inner-class="$remove:focus-within:ring-blue-500 $remove:max-w-md w-full" input-class="$remove:text-gray-700 px-5 py-3 rounded-[20px] w-full text-[#1B275A]" placeholder="Name"></FormKit>
                 <FormKit name="email" message-class="text-red-500" validation="required|email" label="Your email" type="email" outer-class="w-full" wrapper-class="w-full" inner-class="$remove:focus-within:ring-blue-500 $remove:max-w-md w-full" input-class="$remove:text-gray-700 px-5 py-3 rounded-[20px] w-full text-[#1B275A]" placeholder="user@example.com"></FormKit>
@@ -187,7 +187,7 @@
 					By clicking the button, I accept the terms of the
 					<NuxtLink to="/" class="underline text-[#EFEFEF]">policy</NuxtLink>
 				</div>
-            </FormKit>
+            </FormKit> -->
 		</div>
 	</div>
 
@@ -198,16 +198,16 @@
 </template>
 
 <script setup>
-	import { FormKitMessages } from '@formkit/vue'
+	/* import { FormKitMessages } from '@formkit/vue'
     import { reset } from '@formkit/core'
-	import emailjs from '@emailjs/browser';
+	import emailjs from '@emailjs/browser' */
 
     useServerSeoMeta({
 		title: 'Главная',
 		lang: 'ru'
 	})
 
-	let message = ref(null)
+	/* let message = ref(null)
 
 	const feedback = async(forms) =>{
 		emailjs.send("service_unxcext","template_78eh80p",{
@@ -218,5 +218,5 @@
 
 		message.value = 'Успешная отправка!'
 		reset('feedback')
-	}
+	} */
 </script>
