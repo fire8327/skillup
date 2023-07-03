@@ -61,7 +61,6 @@
 				<p class="font-medium text-lg text-[#EAEAEA] max-w-[587px]">Be an irresistible system administrator that companies will hunt for! Join our course today and make a huge leap in your career!</p>
 			</div>
 			<div class="flex max-md:flex-col items-center gap-5">
-				<button class="w-full min-[425px]:w-[300px] text-center font-medium py-3 rounded-[20px] border border-[#FAB437] bg-[#FAB437] transition-colors duration-500 text-[#1B275A] hover:bg-transparent hover:text-[#FAB437]">Sign up</button>
 				<button class="w-full min-[425px]:w-[300px] text-center font-medium py-3 rounded-[20px] border border-[#FAB437] hover:bg-[#FAB437] transition-colors duration-500 hover:text-[#1B275A] bg-transparent text-[#FAB437]">Get a consultation</button>
 			</div>
 		</div>
@@ -154,7 +153,43 @@
 		</div>
 	</div>
 
-
+	<div class="flex flex-col gap-8 md:gap-16 lg:gap-[90px] pt-6 md:pt-8 lg:pt-10 pb-10 md:pb-14 lg:pb-20 border border-[#FFFFFF33] rounded-[20px] items-center px-10 md:px-20 lg:px-[100px] bg-learn">
+		<p class="text-[#F3C354] font-medium text-4xl md:text-5xl lg:text-[59px] text-center">Course cost</p>
+		<div class="w-full lg:justify-between flex max-lg:items-center max-lg:flex-col gap-8">
+			<div class="w-full rounded-[20px] max-w-[661px] pb-7 flex flex-col overflow-hidden bg-[#EAEAEA] gap-6 text-[#222529] h-fit">
+				<p class="w-full py-3 bg-[#FAB437] px-7">7 months</p>
+				<p class="px-7 text-lg font-medium">System Administrator</p>
+				<div class="flex md:items-center md:justify-between max-md:flex-col px-7 gap-6">
+					<div class="flex flex-col gap-6">
+						<p>Course cost</p>
+						<div class="flex flex-col">
+							<p class="text-2xl font-medium">1 013 $</p>
+							<p class="line-through">2 000 $</p>
+						</div>
+					</div>
+					<div class="flex flex-col gap-1 py-2 px-3 bg-[#FAB437] max-md:w-fit">
+						<p class="text-2xl">-40%</p>
+						<p>the promotion is valid <br> until July 4th</p>
+					</div>
+				</div>
+			</div>
+			<FormKit id="feedback" @submit="feedback" type="form" form-class="flex flex-col gap-5 w-full min-[425px]:w-[300px] items-center text-[#EFEFEF]" :actions="false">
+                <p class="text-2xl font-medium">Make an appointment or get a consultation</p>
+				<FormKit name="name" message-class="text-red-500" validation="required" label="Your name" type="text" outer-class="w-full" wrapper-class="w-full" inner-class="$remove:focus-within:ring-blue-500 $remove:max-w-md w-full" input-class="$remove:text-gray-700 px-5 py-3 rounded-[20px] w-full text-[#1B275A]" placeholder="Name"></FormKit>
+                <FormKit name="email" message-class="text-red-500" validation="required|email" label="Your email" type="email" outer-class="w-full" wrapper-class="w-full" inner-class="$remove:focus-within:ring-blue-500 $remove:max-w-md w-full" input-class="$remove:text-gray-700 px-5 py-3 rounded-[20px] w-full text-[#1B275A]" placeholder="user@example.com"></FormKit>
+                <FormKit type="submit" outer-class="w-full" wrapper-class="w-full" input-class="$remove:bg-blue-600 focus:outline-none $remove:font-normal w-full text-center font-medium py-3 rounded-[20px] border border-[#FAB437] hover:bg-[#FAB437] transition-colors duration-500 hover:text-[#1B275A] bg-transparent text-[#FAB437]" :ignore="false">Get a consultation</FormKit>
+				<FormKitMessages class="text-red-500"/>
+				<button type="button" @click="message = null" class="flex items-center justify-center gap-4 w-full text-center font-medium py-3 rounded-[20px] border border-[#FAB437] bg-[#FAB437] transition-colors duration-500 text-[#1B275A]" v-if="message">
+					<span>Успешная отправка</span>
+					<img src="/images/icons/close.png" alt="" class="w-4 h-4">
+				</button>	
+				<div class="text-sm text-[#636972]">
+					By clicking the button, I accept the terms of the
+					<NuxtLink to="/" class="underline text-[#EFEFEF]">policy</NuxtLink>
+				</div>
+            </FormKit>
+		</div>
+	</div>
 
 	<div class="flex max-lg:flex-col max-lg:items-center max-lg:text-center gap-8 md:gap-10 lg:gap-14">
 		<p class="text-[#F3C354] font-medium text-4xl md:text-5xl lg:text-[59px] w-full lg:w-1/2">Diploma of professional retraining</p>
@@ -163,8 +198,25 @@
 </template>
 
 <script setup>
+	import { FormKitMessages } from '@formkit/vue'
+    import { reset } from '@formkit/core'
+	import emailjs from '@emailjs/browser';
+
     useServerSeoMeta({
 		title: 'Главная',
 		lang: 'ru'
 	})
+
+	let message = ref(null)
+
+	const feedback = async(forms) =>{
+		emailjs.send("service_unxcext","template_78eh80p",{
+		name: forms.name,
+		email: forms.email,
+		to_email: "fire83274@gmail.com",
+		}, "VXEtnBV5F6vEGQ15C")
+
+		message.value = 'Успешная отправка!'
+		reset('feedback')
+	}
 </script>
