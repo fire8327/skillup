@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col bg-[#1B275A] pt-12 pb-7 md:pt-20 md:pb-12 lg:pt-[120px] lg:pb-[75px] rounded-[20px] px-10 md:px-20 lg:px-[100px] gap-8 md:gap-16 lg:gap-[90px]">
+	<div class="flex flex-col bg-[#1B275A] pt-12 pb-7 md:pt-20 md:pb-12 lg:pt-[120px] lg:pb-[75px] rounded-[20px] px-10 md:px-20 lg:px-[100px] gap-8 md:gap-16 lg:gap-[90px]" id="home">
 		<div class="flex items-center gap-14 max-lg:flex-col max-lg:gap-8">
 			<div class="flex flex-col gap-6">
 				<p class="text-[#F3C354] font-medium text-4xl md:text-5xl lg:text-[59px]">Getting Started in DevOps: System Administration for Beginners</p>
@@ -34,7 +34,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex flex-col gap-8 md:gap-10 lg:gap-14 items-center">
+	<div class="flex flex-col gap-8 md:gap-10 lg:gap-14 items-center" id="study">
 		<p class="text-[#F3C354] font-medium text-4xl md:text-5xl lg:text-[59px] text-center">Why study system administration on Linux</p>
 		<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-14 lg:gap-28 text-[#EAEAEA]">
 			<div class="flex flex-col gap-4">
@@ -65,7 +65,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex flex-col items-center gap-8 md:gap-10 lg:gap-20">
+	<div class="flex flex-col items-center gap-8 md:gap-10 lg:gap-20" id="course">
 		<p class="text-[#F3C354] font-medium text-4xl md:text-5xl lg:text-[59px] text-center">Who is suitable for this course</p>
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-14 text-[#EAEAEA]">
 			<div class="flex flex-col gap-5">
@@ -84,7 +84,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="flex flex-col items-center gap-8 md:gap-10 lg:gap-20">
+	<div class="flex flex-col items-center gap-8 md:gap-10 lg:gap-20" id="teachers">
 		<p class="text-[#F3C354] font-medium text-4xl md:text-5xl lg:text-[59px] text-center">Your teachers</p>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-10 lg:gap-14 text-[#EAEAEA] w-full">
 			<div class="relative">
@@ -153,7 +153,7 @@
 		</div>
 	</div>
 
-	<div class="flex flex-col gap-8 md:gap-16 lg:gap-[90px] pt-6 md:pt-8 lg:pt-10 pb-10 md:pb-14 lg:pb-20 border border-[#FFFFFF33] rounded-[20px] items-center px-10 md:px-20 lg:px-[100px] bg-learn">
+	<div class="flex flex-col gap-8 md:gap-16 lg:gap-[90px] pt-6 md:pt-8 lg:pt-10 pb-10 md:pb-14 lg:pb-20 border border-[#FFFFFF33] rounded-[20px] items-center px-10 md:px-20 lg:px-[100px] bg-learn" id="price">
 		<p class="text-[#F3C354] font-medium text-4xl md:text-5xl lg:text-[59px] text-center">Course cost</p>
 		<div class="w-full lg:justify-between flex max-lg:items-center max-lg:flex-col gap-8">
 			<div class="w-full rounded-[20px] max-w-[661px] pb-7 flex flex-col overflow-hidden bg-[#EAEAEA] gap-6 text-[#222529] h-fit">
