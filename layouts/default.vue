@@ -4,4 +4,5 @@
         <NuxtPage/>
     </main>
     <Footer/>
+    <Cookie/>
 </template>
