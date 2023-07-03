@@ -17,7 +17,6 @@
     "nuxt": "^3.6.1"
   },
   "dependencies": {
-    "@emailjs/browser": "^3.11.0",
-    "@formkit/core": "^0.17.4"
+    "@emailjs/browser": "^3.11.0"
   }
 }
