@@ -10,5 +10,12 @@ export default defineNuxtConfig({
     families: {
         'Inter': true
     }
+  },
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+      cssnano: false
+    }
   }
 })
